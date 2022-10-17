@@ -32,15 +32,15 @@
 
     //die(var_dump($arr_json->dbhost));
 
-    // $dbhost = 'localhost';//$arr_json->dbhost;
-    // $dbname = 'dds311';//$arr_json->dbase;
-    // $dbuser = 'root';//$arr_json->dbuser;
-    // $dbpwd  = 'r00t@Abc';//$arr_json->dbpass;
+      $dbhost = 'localhost';//$arr_json->dbhost;
+      $dbname = 'produtos';//$arr_json->dbase;
+      $dbuser = 'root';//$arr_json->dbuser;
+      $dbpwd  = '';//$arr_json->dbpass;
 
-    $dbhost = $arr_json->dbhost;
-    $dbname = $arr_json->dbase;
-    $dbuser = $arr_json->dbuser;
-    $dbpwd  = $arr_json->dbpass;
+   //  $dbhost = $arr_json->dbhost;
+   //  $dbname = $arr_json->dbase;
+   //  $dbuser = $arr_json->dbuser;
+   //  $dbpwd  = $arr_json->dbpass;
 
     $options    = [
       \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
