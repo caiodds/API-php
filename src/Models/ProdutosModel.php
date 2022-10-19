@@ -36,12 +36,12 @@
 
         //die(var_dump($entity));
 
-        $sql  = ' INSERT INTO contatos (id_produtos, nome_produto, descricao_produto) ';
+        $sql  = ' INSERT INTO produto (id_produtos, nome_produto, descricao_produto) ';
         $sql .= ' VALUES(?,?,?,?,? ) ' ;
 
         $stm = $this->con->prepare($sql);
 
-        $stm->bindValue(1, $entity->getId_produto());
+        $stm->bindValue(1, $entity->getId_produtos());
         $stm->bindValue(2, $entity->getNome_produto());
         $stm->bindValue(3, $entity->getDescricao_produto());
 
@@ -61,7 +61,7 @@
     public function update(\App\Entities\Produtos $entity): bool{
            //die(var_dump($entity));
 
-           $sql  = ' UPDATE contatos                             
+           $sql  = ' UPDATE produto                            
                             SET nome_produto = ? , 
                             descricao_produto = ? , ';
 
@@ -69,7 +69,7 @@
               
            $stm = $this->con->prepare($sql);
    
-           $stm->bindValue(1, $entity->getId_produto());
+           $stm->bindValue(1, $entity->getId_produtos());
            $stm->bindValue(2, $entity->getNome_produto());
            $stm->bindValue(3, $entity->getDescricao_produto());
    

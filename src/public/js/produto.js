@@ -1,6 +1,6 @@
 
 
-  const  mostrarproduto = document.getElementById(' mostrarproduto')
+
 
 const mostrarProdutos = () => {
     const produtoo = document.getElementById('produto')

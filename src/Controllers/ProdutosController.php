@@ -9,15 +9,15 @@
  namespace App\Controllers;
  
  use \App\Entities\Produtos as Produtos;
- use \App\Models\ProdutoModel as ProdutoModel;
+ use \App\Models\ProdutosModel as ProdutosModel;
  
  class ProdutosController extends Controller{
      private Produtos $entity;
-     private ProdutosModels $model;
+     private ProdutosModel $model;
     
      public function __construct(){
         parent::__construct();
-        $this->model = new \App\Models\ProdutosModels();
+        $this->model = new \App\Models\ProdutosModel();
         
      }
 
@@ -27,15 +27,15 @@
       * @return json    
       */
      public function getAll(){  
-        $contatos = $this->model->getAll();
-        if ( $contatos ){
+        $produtos = $this->model->getAll();
+        if ( $produtos ){
             return json_encode ( ['success'=> true, 
-               'data' => $contatos, 
+               'data' => $produtos, 
                'message' => 'dados obtidos com sucesso.' ]);
         }
 
         return ( ['success'=> false, 
-                  'data' => $contatos, 
+                  'data' => $produtos, 
                   'message' => 'consulta não retornou dados' ]);
      }
 
@@ -65,8 +65,8 @@
      }
 
      //Atualiza o contato na base de dados
-     public function update(Produtos $produto){
-        if ( $this->model->update($produto) ){
+     public function update(Produtos $produtos){
+        if ( $this->model->update($produtos) ){
             $this->success = true;
             $this->data = [];
             $this->msg = 'Registro atualizado com sucesso.';

@@ -21,19 +21,19 @@
  
     $json = file_get_contents( __DIR__ . '/../../config.json');
     
-    // $json = '{
-    //   "dbhost":"localhost",
-    //   "dbase": "dds311",
-    //   "dbuser":"root",
-    //   "dbpass":"r00t@Abc" 
-    //  }';
+    $json = '{
+      "dbhost":"localhost",
+      "dbase": "dds_3_11",
+      "dbuser":"root",
+      "dbpass":"" 
+     }';
 
     $arr_json =  json_decode($json);
 
     //die(var_dump($arr_json->dbhost));
 
       $dbhost = 'localhost';//$arr_json->dbhost;
-      $dbname = 'produtos';//$arr_json->dbase;
+      $dbname = 'dds_3_11';//$arr_json->dbase;
       $dbuser = 'root';//$arr_json->dbuser;
       $dbpwd  = '';//$arr_json->dbpass;
 
