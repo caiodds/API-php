@@ -21,14 +21,15 @@
     }
 
     public function getAll(){
-        $sql = 'SELECT * FROM produto';
+        $sql = 'SELECT * FROM produtos';
         $query = $this->con->query($sql, \PDO::FETCH_OBJ);
-
+        // die(var_dump($query));
         $data = [];
+
         foreach( $query->fetchAll() as $row ) { 
              $data[] = $row;
         }
-        
+       
         return $data;
     }
 
@@ -62,16 +63,16 @@
            //die(var_dump($entity));
 
            $sql  = ' UPDATE produto                            
-                            SET nome_produto = ? , 
+                            SET nome_produtos = ? , 
                             descricao_produto = ? , ';
 
            $sql .= ' WHERE id = ? ' ;
               
            $stm = $this->con->prepare($sql);
    
-           $stm->bindValue(1, $entity->getId_produtos());
-           $stm->bindValue(2, $entity->getNome_produto());
-           $stm->bindValue(3, $entity->getDescricao_produto());
+           $stm->bindValue(1, $entity->getId());
+           $stm->bindValue(2, $entity->getNome());
+           $stm->bindValue(3, $entity->getDescricao());
    
            $updated = $stm->execute();
    
@@ -88,7 +89,7 @@
 
     public function delete($id){
         $sql  = ' DELETE FROM produto '; 
-        $sql .= ' WHERE id_produto = ? ' ;
+        $sql .= ' WHERE id_produtos = ? ' ;
 
         $stm = $this->con->prepare($sql);
         $stm->bindValue(1, $id);

@@ -5,16 +5,7 @@
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-header('Access-Control-Allow-Origin: *'); 
-header("Access-Control-Allow-Credentials: true");
-header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
-header('Access-Control-Max-Age: 1000');
-header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token , Authorization');
 
-header('Content-Type: Application/json; charset=UTF-8');
-
-ini_set('display_errors', TRUE);
-ini_set('error_reporting', E_ALL|E_CORE_WARNING);
 
 $method = $_SERVER['REQUEST_METHOD'];
 $ProdutosController = new \App\Controllers\ProdutosController();
@@ -25,9 +16,10 @@ $produto = "";
 switch ($method){
     
     case 'GET':
-        $produtos = $ProdutosController->getAll();        
-        //echo json_encode( $contatos); //, JSON_PRETTY_PRINT );
-        echo $produtoss;
+        $produtos = $ProdutosController->getAll();
+        //die(var_dump($produtos));        
+        //echo json_encode( $contatos); //, JSON_PRETTY_PRINT );]        
+        echo $produtos;
     break;
 
     case 'POST':

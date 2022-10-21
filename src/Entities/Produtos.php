@@ -12,93 +12,89 @@
  class Produtos {
 
     private int $id_produtos;
-    private string $nome_prodto;
+    private string $nome_produto;
     private string $descricao_produto;
     private string $valor_unitario;
 
+  
+
     /**
-     * Get the value of id
+     * Get the value of id_produtos
      */ 
-    public function getId(){
-        return $this->id;
+    public function getId_produtos()
+    {
+        return $this->id_produtos;
     }
 
     /**
-     * Set the value of id
+     * Set the value of id_produtos
      *
      * @return  self
      */ 
-    public function setId($id) {
-        $this->id = $id;
+    public function setId_produtos($id_produtos)
+    {
+        $this->id_produtos = $id_produtos;
+
+        return $this;
     }
 
-    
-
     /**
-     * Get the value of nome
+     * Get the value of nome_produto
      */ 
-    public function getNome(){
-        return $this->nome;
+    public function getNome_produto()
+    {
+        return $this->nome_produto;
     }
 
     /**
-     * Set the value of nome
+     * Set the value of nome_produto
      *
      * @return  self
      */ 
-    public function setNome($nome){
-        $this->nome = $nome;
+    public function setNome_produto($nome_produto)
+    {
+        $this->nome_produto = $nome_produto;
+
+        return $this;
     }
 
-    
-
     /**
-     * Get the value of email
+     * Get the value of descricao_produto
      */ 
-    public function getEmail(){
-        return $this->email;
+    public function getDescricao_produto()
+    {
+        return $this->descricao_produto;
     }
 
     /**
-     * Set the value of email
+     * Set the value of descricao_produto
      *
      * @return  self
      */ 
-    public function setEmail($email){
-        $this->email = $email;
+    public function setDescricao_produto($descricao_produto)
+    {
+        $this->descricao_produto = $descricao_produto;
+
+        return $this;
     }
 
-    
-
     /**
-     * Get the value of assunto
+     * Get the value of valor_unitario
      */ 
-    public function getAssunto(){
-        return $this->assunto;
+    public function getValor_unitario()
+    {
+        return $this->valor_unitario;
     }
 
     /**
-     * Set the value of assunto
+     * Set the value of valor_unitario
      *
      * @return  self
      */ 
-    public function setAssunto($assunto){
-        $this->assunto = $assunto;
-    }
+    public function setValor_unitario($valor_unitario)
+    {
+        $this->valor_unitario = $valor_unitario;
 
-    /**
-     * Get the value of mensagem
-     */ 
-    public function getMensagem(){
-        return $this->mensagem;
+        return $this;
     }
-
-    /**
-     * Set the value of mensagem
-     *
-     * @return  self
-     */ 
-    public function setMensagem($mensagem){
-        $this->mensagem = $mensagem;
-    }
- }
+ }  

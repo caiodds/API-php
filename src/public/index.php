@@ -2,13 +2,18 @@
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-// $parsed_url = parse_url($_SERVER['REQUEST_URI']);
+// header('Access-Control-Allow-Origin: *'); 
+// header("Access-Control-Allow-Credentials: true");
+// header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+// header('Access-Control-Max-Age: 1000');
+// header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token , Authorization');
 
-// //die(var_dump($parsed_url['path']) );
+// header('Content-Type: Application/json; charset=UTF-8');
 
-
-// if ($parsed_url['path'] === '/home') {
+// ini_set('display_errors', TRUE);
+// ini_set('error_reporting', E_ALL|E_CORE_WARNING);
     
+
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         require_once( __DIR__ . '/index.html');
     }
